@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "207822747556",
+    "project_id": "echo24-6f2b1",
+    "storage_bucket": "echo24-6f2b1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207822747556:android:26c1c59e8a6c54b70cf331",
+        "android_client_info": {
+          "package_name": "com.example.echo24"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7KJcv7CulHOLbtJ-wwZrTbpmDmKFU7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
