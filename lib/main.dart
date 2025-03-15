@@ -4,9 +4,15 @@ import 'firebase_options.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/complete_profile_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // 🔹 Charger les variables d'environnement
+  await dotenv.load(fileName: ".env");
+
+  // 🔹 Initialiser Firebase avec les variables sécurisées
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
