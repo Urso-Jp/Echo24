@@ -10,12 +10,16 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // 🔹 Charger les variables d'environnement
-  await dotenv.load(fileName: ".env");
+  await dotenv.load(fileName: "assets/.env");
 
-  // 🔹 Initialiser Firebase avec les variables sécurisées
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // 🔹 Initialiser Firebase en évitant le crash si l'app est déjà initialisée
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    print("🔥 Firebase est déjà initialisé : $e");
+  }
 
   runApp(const Echo24App());
 }
